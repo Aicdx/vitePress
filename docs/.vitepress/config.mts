@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import sidebar from '../sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'HTMl&CSS', link: '/htmlCss/index' },
-      { text: '算法', link: '/study/studyNotes' },
+      { text: '算法', link: '/Algorithm/index' },
       { text: 'Vue', link: '/study/studyNotes' },
       { text: 'React', link: '/study/studyNotes' },
       { text: '性能优化', link: '/study/studyNotes' },
@@ -21,24 +22,7 @@ export default defineConfig({
 
     ],
 
-    sidebar: [
-      {
-        items: [
-          {
-            text: '学习笔记',
-            // 开启折叠按钮
-            collapsed: false,
-            items: [
-              { text: 'Vue学习笔记', link: '/study/vue.md' },
-              { text: 'Node学习笔记', link: '/study/node.md' },
-              { text: 'React学习笔记', link: '/study/react.md' }
-            ]
-          },
-          { text: 'Markdown Examples', link: '/markdown-examples'},
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Aicdx' }
