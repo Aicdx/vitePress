@@ -2,14 +2,23 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
+  title: "Acid的博客",
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: 'local'
+    },
+    
     nav: [
       { text: '首页', link: '/' },
-      { text: '样例', link: '/markdown-examples' },
-      { text: '学习笔记', link: '/study/studyNotes' }
+      { text: 'HTMl&CSS', link: '/htmlCss/index' },
+      { text: '算法', link: '/study/studyNotes' },
+      { text: 'Vue', link: '/study/studyNotes' },
+      { text: 'React', link: '/study/studyNotes' },
+      { text: '性能优化', link: '/study/studyNotes' },
+      { text: '手写', link: '/study/studyNotes' },
+
     ],
 
     sidebar: [
@@ -32,7 +41,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/Aicdx' }
+    ],
   }
 })
