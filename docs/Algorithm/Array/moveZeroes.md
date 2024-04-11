@@ -39,7 +39,7 @@ var moveZeroes = function(nums) {
 }
 ```
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/9/19/16d4743bea52bacf~tplv-t2oaga2asx-image.image)
+![结果](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/9/19/16d4743bea52bacf~tplv-t2oaga2asx-image.image)
 
 方法二：
 
@@ -63,4 +63,4 @@ var moveZeroes = function(nums) {
 }
 ```
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/9/19/16d474cc911957ed~tplv-t2oaga2asx-image.image)
+![结果](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/9/19/16d474cc911957ed~tplv-t2oaga2asx-image.image)
