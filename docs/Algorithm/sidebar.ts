@@ -5,8 +5,7 @@ const AlgorithmSidebar = [
         text: "数组相关",
         collapsed: true,
         items: [
-          { text: "移动0", link: "/Algorithm/moveZeroes" },
-          { text: "删除", link: "/guide/" },
+          { text: "移动0", link: "/Algorithm/Array/moveZeroes" },
         ],
       },
       {
@@ -24,6 +23,10 @@ const AlgorithmSidebar = [
       {
         text: "树相关",
         items: [{ text: "删除", link: "/guide/" }],
+      },
+      {
+        text: "栈和队列",
+        items: [{ text: "232.用栈实现队列.md", link: "/Algorithm/Stack/232.用栈实现队列" }],
       },
       {
         text: "其他",
