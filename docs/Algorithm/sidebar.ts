@@ -26,7 +26,9 @@ const AlgorithmSidebar = [
       },
       {
         text: "栈和队列",
-        items: [{ text: "232.用栈实现队列.md", link: "/Algorithm/Stack/232.用栈实现队列" }],
+        items: [
+          { text: "232.用栈实现队列.md", link: "/Algorithm/Stack/232.用栈实现队列" },
+          { text: "239.滑动窗口最大值", link: "/Algorithm/Stack/239.滑动窗口最大值" }],
       },
       {
         text: "其他",
