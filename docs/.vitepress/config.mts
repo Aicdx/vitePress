@@ -14,6 +14,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'HTMl&CSS', link: '/htmlCss/index' },
+      { text: '工程化', link: '/Engineering/index' },
       { text: '算法', link: '/Algorithm/index' },
       { text: 'Vue', link: '/study/studyNotes' },
       { text: 'React', link: '/study/studyNotes' },

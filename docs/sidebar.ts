@@ -1,4 +1,5 @@
 import AlgorithmSidebar from "./Algorithm/sidebar";
+import EngineeringSidebar from "./Engineering/sidebar";
 
 const sidebar = {
   "/htmlCss/": [
@@ -11,7 +12,8 @@ const sidebar = {
       ],
     },
   ],
-  "/Algorithm/": AlgorithmSidebar
+  "/Algorithm/": AlgorithmSidebar,
+  "/Engineering/": EngineeringSidebar
 };
 
 export default sidebar;
