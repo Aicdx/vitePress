@@ -114,3 +114,54 @@ map文件只要不打开开发者工具，浏览器是不会加载的。
 HMR的核心就是客户端从服务端拉去更新后的文件，准确的说是 chunk diff (chunk 需要更新的部分)，实际上 WDS 与浏览器之间维护了一个 `Websocket`，当本地资源发生变化时，WDS 会向浏览器推送更新，并带上构建时的 hash，让客户端与上一次资源进行对比。客户端对比出差异后会向 WDS 发起 `Ajax` 请求来获取更改内容(文件列表、hash)，这样客户端就可以再借助这些信息继续向 WDS 发起 `jsonp` 请求获取该chunk的增量更新。
 
 后续的部分(拿到增量更新之后如何处理？哪些状态该保留？哪些又需要更新？)由 `HotModulePlugin` 来完成，提供了相关 API 以供开发者针对自身场景进行处理，像`react-hot-loader` 和 `vue-loader` 都是借助这些 API 实现 HMR。
+
+## webpack优化
+
+- `使用更高版本Webpack 和 Node.js`
+- `多进程/多实例构建`：HappyPack、thread-loader
+- `压缩代码`
+
+  - 多进程并行压缩
+
+    - webpack-paralle-uglify-plugin
+    - uglifyjs-webpack-plugin 开启 parallel 参数 (不支持ES6)
+    - terser-webpack-plugin 开启 parallel 参数
+
+  - 通过 mini-css-extract-plugin 提取 Chunk 中的 CSS 代码到单独文件，通过 css-loader 的 minimize 选项开启 cssnano 压缩 CSS。
+- `图片压缩`  
+    配置`image-webpack-loader`
+
+- `Tree Shaking`  
+    `Tree Shaking`是一个术语，在计算机中表示消除死代码，依赖于ES Module的静态语法分析（不执行任何的代码，可以明确知道模块的依赖关系）。 在`webpack`实现`Tree shaking`有两种方案：
+
+  - usedExports：通过标记某些函数是否被使用，之后通过 `Terser` 来进行优化的  
+
+        ```ini
+        module.exports = {
+            ...
+            optimization:{
+                usedExports
+            }
+        }
+        ```
+
+        使用之后，没被用上的代码在`webpack`打包中会加入`unused harmony export mul`注释，用来告知`Terser`在优化时，可以删除掉这段代码。
+
+  - sideEffects：跳过整个模块/文件，直接查看该文件是否有副作用  
+        `sideEffects`用于告知`webpack compiler`哪些模块时有副作用，配置方法是在`package.json`中设置`sideEffects`属性。如果`sideEffects`设置为`false`，就是告知`webpack`可以安全的删除未用到的`exports`。如果有些文件需要保留，可以设置为数组的形式，如：
+
+        ```json
+        "sideEffecis":[
+            "./src/util/format.js",
+            "*.css" // 所有的css文件
+        ]
+        ```
+
+- `缩小打包域`  
+    排除`webpack`不需要解析的模块，即在使用`loader`的时候，在尽量少的模块中去使用。可以借助 `include`和`exclude`这两个参数，规定`loader`只在那些模块应用和在哪些模块不应用。
+
+- `减少ES6转为ES5的冗余代码`  
+    使用`bable-plugin-transform-runtime`插件
+
+- `提取公共代码`  
+    通过配置`CommonsChunkPlugin`插件，将多个页面的公共代码抽离成单独的文件
