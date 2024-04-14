@@ -5,12 +5,20 @@ import sidebar from '../sidebar'
 export default defineConfig({
   title: "Acid的博客",
   description: "A VitePress Site",
+  lang: 'zh-CN',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
       provider: 'local'
     },
-    
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+    outline: {
+      level: [2, 3],
+      label:'目录'
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: 'HTMl&CSS', link: '/htmlCss/index' },
@@ -28,5 +36,12 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Aicdx' }
     ],
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium'
+      }
+    }
   }
 })

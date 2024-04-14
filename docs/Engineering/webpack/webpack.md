@@ -51,7 +51,14 @@
 
 `Plugin` 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
 
-## 3.Webpack构建流程
+## bundle 和 chunk,moudle
+
+- bundle 是由webpack打包生成的文件，包含了所有模块的代码，一般是一个js文件。
+- chunk 是指webpack在进行代码分割时，生成的代码块，一个chunk由多个模块组合而成。
+- module 是指js中的模块，webpack会将每个模块打包成一个module，module是chunk的组成部分。
+- bundle是chunk的集合，chunk是module的集合。
+  
+## Webpack构建流程
 
 Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：
 
@@ -85,3 +92,25 @@ Webpack 的运行流程是一个串行的过程，从启动到结束会依次执
   - [Taro](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2FNervJS%2Ftaro%2Fblob%2Fmaster%2Fpackages%2Ftaro-transformer-wx%2Fsrc%2Findex.ts%23L15 "https://github.com/NervJS/taro/blob/master/packages/taro-transformer-wx/src/index.ts#L15")就是利用 babel 完成的小程序语法转换
 
 - 生成：以新的 AST 为基础生成代码
+
+## source map
+
+`source map` 是将编译、打包、压缩后的代码映射回源代码的过程。打包压缩后的代码不具备良好的可读性，想要调试源码就需要 soucre map。
+
+map文件只要不打开开发者工具，浏览器是不会加载的。
+
+线上环境一般有三种处理方案：
+
+- `hidden-source-map`：借助第三方错误监控平台 Sentry 使用
+- `nosources-source-map`：只会显示具体行数以及查看源代码的错误栈。安全性比 sourcemap 高
+- `sourcemap`：通过 nginx 设置将 .map 文件只对白名单开放(公司内网)
+
+注意：避免在生产中使用 `inline-` 和 `eval-`，因为它们会增加 bundle 体积大小，并降低整体性能。
+
+## webpack热更新原理
+
+`Webpack` 的热更新又称热替换（`Hot Module Replacement`），缩写为 `HMR`。 这个机制可以做到不用刷新浏览器而将新变更的模块替换掉旧的模块。
+
+HMR的核心就是客户端从服务端拉去更新后的文件，准确的说是 chunk diff (chunk 需要更新的部分)，实际上 WDS 与浏览器之间维护了一个 `Websocket`，当本地资源发生变化时，WDS 会向浏览器推送更新，并带上构建时的 hash，让客户端与上一次资源进行对比。客户端对比出差异后会向 WDS 发起 `Ajax` 请求来获取更改内容(文件列表、hash)，这样客户端就可以再借助这些信息继续向 WDS 发起 `jsonp` 请求获取该chunk的增量更新。
+
+后续的部分(拿到增量更新之后如何处理？哪些状态该保留？哪些又需要更新？)由 `HotModulePlugin` 来完成，提供了相关 API 以供开发者针对自身场景进行处理，像`react-hot-loader` 和 `vue-loader` 都是借助这些 API 实现 HMR。
