@@ -27,7 +27,7 @@ export default defineConfig({
       { text: 'Vue', link: '/study/studyNotes' },
       { text: 'React', link: '/study/studyNotes' },
       { text: '性能优化', link: '/study/studyNotes' },
-      { text: '手写', link: '/study/studyNotes' },
+      { text: '手写', link: '/HandWriting/index' },
 
     ],
 
