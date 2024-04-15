@@ -7,7 +7,10 @@ const HandWritingSidebar = [
         text: "dobounce,throttle",
         link: "/HandWriting/dobounce",
       },
-    
+      {
+        text: "promise",
+        link: "/HandWriting/promise",
+      },
   
 ];
 export default HandWritingSidebar;
