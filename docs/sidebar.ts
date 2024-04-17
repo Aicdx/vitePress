@@ -1,6 +1,7 @@
 import AlgorithmSidebar from "./Algorithm/sidebar";
 import EngineeringSidebar from "./Engineering/sidebar";
 import HandWritingSidebar from "./HandWriting/sidebar";
+import VueSidebar from "./Vue/sidebar";
 
 const sidebar = {
   "/htmlCss/": [
@@ -15,7 +16,8 @@ const sidebar = {
   ],
   "/Algorithm/": AlgorithmSidebar,
   "/Engineering/": EngineeringSidebar,
-  "/HandWriting/": HandWritingSidebar
+  "/HandWriting/": HandWritingSidebar,
+  "/Vue/": VueSidebar
 };
 
 export default sidebar;

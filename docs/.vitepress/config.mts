@@ -24,7 +24,7 @@ export default defineConfig({
       { text: 'HTMl&CSS', link: '/htmlCss/index' },
       { text: '工程化', link: '/Engineering/index' },
       { text: '算法', link: '/Algorithm/index' },
-      { text: 'Vue', link: '/study/studyNotes' },
+      { text: 'Vue', link: '/Vue/index' },
       { text: 'React', link: '/study/studyNotes' },
       { text: '性能优化', link: '/study/studyNotes' },
       { text: '手写', link: '/HandWriting/index' },
