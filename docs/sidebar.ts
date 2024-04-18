@@ -1,5 +1,6 @@
 import AlgorithmSidebar from "./Algorithm/sidebar";
 import EngineeringSidebar from "./Engineering/sidebar";
+import FlutterSidebar from "./Flutter/sidebar";
 import HandWritingSidebar from "./HandWriting/sidebar";
 import VueSidebar from "./Vue/sidebar";
 
@@ -17,7 +18,8 @@ const sidebar = {
   "/Algorithm/": AlgorithmSidebar,
   "/Engineering/": EngineeringSidebar,
   "/HandWriting/": HandWritingSidebar,
-  "/Vue/": VueSidebar
+  "/Vue/": VueSidebar,
+  "/Flutter/":FlutterSidebar
 };
 
 export default sidebar;

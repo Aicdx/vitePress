@@ -28,7 +28,7 @@ export default defineConfig({
       { text: 'React', link: '/study/studyNotes' },
       { text: '性能优化', link: '/study/studyNotes' },
       { text: '手写', link: '/HandWriting/index' },
-
+      { text: 'Flutter', link: '/Flutter/index' },
     ],
 
     sidebar: sidebar,
