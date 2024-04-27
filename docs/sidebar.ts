@@ -3,8 +3,10 @@ import EngineeringSidebar from "./Engineering/sidebar";
 import FlutterSidebar from "./Flutter/sidebar";
 import HandWritingSidebar from "./HandWriting/sidebar";
 import VueSidebar from "./Vue/sidebar";
+import JavaScriptSidebar from "./javaScript/sidebar";
 
 const sidebar = {
+  "/JavaScript/": JavaScriptSidebar,
   "/htmlCss/": [
     {
       text: "Guide",
@@ -19,7 +21,7 @@ const sidebar = {
   "/Engineering/": EngineeringSidebar,
   "/HandWriting/": HandWritingSidebar,
   "/Vue/": VueSidebar,
-  "/Flutter/":FlutterSidebar
+  "/Flutter/": FlutterSidebar,
 };
 
 export default sidebar;
