@@ -4,8 +4,8 @@ const JavaScriptSidebar = [
     link: "/JavaScript/scope",
   },
   {
-    text: "dobounce,throttle",
-    link: "/JavaScript/dobounce",
+    text: "面向对象",
+    link: "/JavaScript/objectOriented",
   },
   {
     text: "promise",
