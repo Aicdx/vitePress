@@ -3,7 +3,7 @@ import EngineeringSidebar from "./Engineering/sidebar";
 import FlutterSidebar from "./Flutter/sidebar";
 import HandWritingSidebar from "./HandWriting/sidebar";
 import VueSidebar from "./Vue/sidebar";
-import JavaScriptSidebar from "./javaScript/sidebar";
+import JavaScriptSidebar from "./JavaScript/sidebar";
 
 const sidebar = {
   "/JavaScript/": JavaScriptSidebar,
