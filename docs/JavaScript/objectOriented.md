@@ -81,7 +81,7 @@ table.
 - constructor & 继承属性 来自于new => 形成了属性传递的链条
 - 子类上生成__proto__ ，将.prototype放入 => 原型链
 
-![alt text](image.png)
+![alt text](./img/image.png)
 
 #### 回答追问
 
