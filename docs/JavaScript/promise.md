@@ -51,7 +51,7 @@
 - 微任务 promise definePorperty Proxy
 - 宏任务执行完会触发页面渲染，微任务不会
 
-![alt text](image.png)
+![alt text](./img/image-4.png)
 
 ```js
     setTimeout(() => {
