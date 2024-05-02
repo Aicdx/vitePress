@@ -11,5 +11,9 @@ const JavaScriptSidebar = [
     text: "promise",
     link: "/JavaScript/promise",
   },
+  {
+    text: "模块化",
+    link: "/JavaScript/module",
+  },
 ];
 export default JavaScriptSidebar;

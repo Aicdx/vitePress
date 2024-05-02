@@ -40,6 +40,12 @@
 
 #### 浏览器原理
 
+- GUI渲染线程
+- JS引擎线程
+- 定时器线程
+- 异步http请求线程
+- 事件触发线程
+
 ![alt text](./img/image-1.png)
 
 ##### Event Loop
