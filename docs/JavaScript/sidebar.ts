@@ -15,5 +15,9 @@ const JavaScriptSidebar = [
     text: "模块化",
     link: "/JavaScript/module",
   },
+  {
+    text: "浏览器相关",
+    link: "/JavaScript/browser",
+  },
 ];
 export default JavaScriptSidebar;
