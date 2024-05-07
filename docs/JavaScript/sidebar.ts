@@ -19,5 +19,9 @@ const JavaScriptSidebar = [
     text: "浏览器相关",
     link: "/JavaScript/browser",
   },
+  {
+    text: "函数式编程",
+    link: "/JavaScript/functional",
+  },
 ];
 export default JavaScriptSidebar;
