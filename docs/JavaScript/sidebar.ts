@@ -23,5 +23,9 @@ const JavaScriptSidebar = [
     text: "函数式编程",
     link: "/JavaScript/functional",
   },
+  {
+    text: "性能优化",
+    link: "/JavaScript/optimization",
+  },
 ];
 export default JavaScriptSidebar;
