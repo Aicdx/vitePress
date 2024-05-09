@@ -15,5 +15,9 @@ const HandWritingSidebar = [
     text: "柯里化",
     link: "/HandWriting/corride",
   },
+  {
+    text: "柯里化",
+    link: "/HandWriting/limitPromise",
+  },
 ];
 export default HandWritingSidebar;
