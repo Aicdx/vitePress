@@ -7,13 +7,14 @@
 ```js
 function dobounce(fn,ms){
     let timer =null
-    return function(...args){
+    return function(){
         const context = this
+        let args = arguments
         if(timer){
             clearTimeout(timer)
         }
         timer = setTimeout(()=>{
-            fn.apply(context,...args)
+            fn.apply(context,args)
         },ms)
     }
 }

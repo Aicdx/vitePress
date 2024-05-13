@@ -16,8 +16,16 @@ const HandWritingSidebar = [
     link: "/HandWriting/corride",
   },
   {
-    text: "柯里化",
+    text: "并发",
     link: "/HandWriting/limitPromise",
+  },
+  {
+    text: "拷贝",
+    link: "/HandWriting/copy",
+  },
+  {
+    text: "数据结构",
+    link: "/HandWriting/dataStructure",
   },
 ];
 export default HandWritingSidebar;
