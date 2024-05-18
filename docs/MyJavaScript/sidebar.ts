@@ -1,31 +1,31 @@
 const JavaScriptSidebar = [
   {
     text: "this & 作用域 & 闭包",
-    link: "/JavaScript/scope",
+    link: "/MyJavaScript/scope",
   },
   {
     text: "面向对象",
-    link: "/JavaScript/objectOriented",
+    link: "/MyJavaScript/objectOriented",
   },
   {
     text: "promise",
-    link: "/JavaScript/promise",
+    link: "/MyJavaScript/promise",
   },
   {
     text: "模块化",
-    link: "/JavaScript/module",
+    link: "/MyJavaScript/module",
   },
   {
     text: "浏览器相关",
-    link: "/JavaScript/browser",
+    link: "/MyJavaScript/browser",
   },
   {
     text: "函数式编程",
-    link: "/JavaScript/functional",
+    link: "/MyJavaScript/functional",
   },
   {
     text: "性能优化",
-    link: "/JavaScript/optimization",
+    link: "/MyJavaScript/optimization",
   },
 ];
 export default JavaScriptSidebar;
