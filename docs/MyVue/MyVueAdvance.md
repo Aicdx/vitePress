@@ -51,8 +51,8 @@
 
 #### 其他方案
 
-- 函数 - {{ calcAdd(header) }}、 管道符（过滤器，vue3中废弃） - {{ header | calcAdd }}
-- v-text="header"、v-html="header"
+- 函数 - { calcAdd(header) }、 管道符（过滤器，vue3中废弃） ```{ header | calcAdd }```
+- `v-text="header"`、`v-html="header"`
 - 三元表达式
 
 ### JSX

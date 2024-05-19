@@ -2,7 +2,7 @@ import AlgorithmSidebar from "./Algorithm/sidebar";
 import EngineeringSidebar from "./Engineering/sidebar";
 import FlutterSidebar from "./Flutter/sidebar";
 import HandWritingSidebar from "./HandWriting/sidebar";
-import VueSidebar from "./Vue/sidebar";
+import VueSidebar from "./MyVue/sidebar";
 import JavaScriptSidebar from "./MyJavaScript/sidebar";
 
 const sidebar = {
@@ -20,7 +20,7 @@ const sidebar = {
   "/Algorithm/": AlgorithmSidebar,
   "/Engineering/": EngineeringSidebar,
   "/HandWriting/": HandWritingSidebar,
-  "/Vue/": VueSidebar,
+  "/MyVue/": VueSidebar,
   "/Flutter/": FlutterSidebar,
 };
 
