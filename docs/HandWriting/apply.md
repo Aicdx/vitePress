@@ -52,7 +52,7 @@ Array.prototype.MyApply= function(context,args = []){
     context = context || window
     const funcId = Symbol('funcId')
     context[funcId] = this
-    const result = context[funcId](...args)
+    const result = context[funcId](args)
     delete context[funcId]
     return result
 }
@@ -65,16 +65,37 @@ Array.prototype.MyApply= function(context,args = []){
 ### 实现bind
 
 ```js
-Array.prototype.MyBind = function (context,...args){
-    context = context || window
-    const fn = this
-    function newFn(...newArgs){
-        if(this instanceof newFn){// new newFn 的情况
-            return new newFn(...args,...newArgs)
-        }
-        return fn.call(...args,...newArgs)
+Array.prototype.MyBind = function (){
+    const _this = this
+    //arguments 是函数内部所有参数的伪数组，需要转成数组操作
+    const args = Array.prototype.slice.call(arguments)
+    //第一项为this 后续为函数参数
+    const newThis = args.shift()
+    return function(){
+        return _this.newApply(newThis.args)
     }
-    newFn.prototype = Object.create(fn.prototype)
-    return newFn
+}
+Function.prototype.newApply = function(context){
+    if(typeof this !== 'function'){
+        throw new TypeError('type error')
+    }
+    context = context || this
+    context.fn = this
+    // 临时挂载函数，执行完需要删除
+    let result = arguments[1]?context.fn(...arguments[1]):context.fn()
+    delete context.fn
+    return result
+}
+//call
+Function.prototype.newCall = function(context,...args){
+    if(typeof this !== 'function'){
+        throw new TypeError('type error')
+    }
+    context = context || this
+    context.fn = this
+    // 临时挂载函数，执行完需要删除
+    let result =context.fn(...args)
+    delete context.fn
+    return result
 }
 ```
