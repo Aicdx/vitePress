@@ -17,6 +17,26 @@ const AlgorithmSidebar = [
             text: "203.移除链表元素",
             link: "/Algorithm/ListNode/203.移除链表元素",
           },
+          {
+            text: "[707] 设计链表",
+            link: "/Algorithm/ListNode/[707] 设计链表",
+          },
+          {
+            text: "[206] 反转链表",
+            link: "/Algorithm/ListNode/[206] 反转链表",
+          },
+          {
+            text: "[24] 两两交换链表中的节点",
+            link: "/Algorithm/ListNode/[24] 两两交换链表中的节点",
+          },
+          {
+            text: "[19] 删除链表的倒数第 N 个结点",
+            link: "/Algorithm/ListNode/[19] 删除链表的倒数第 N 个结点",
+          },
+          {
+            text: "总结",
+            link: "/Algorithm/ListNode/Summarize",
+          },
         ],
       },
       {
