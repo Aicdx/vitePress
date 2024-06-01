@@ -12,7 +12,12 @@ const AlgorithmSidebar = [
       },
       {
         text: "链表相关",
-        items: [{ text: "删除", link: "/guide/" }],
+        items: [
+          {
+            text: "203.移除链表元素",
+            link: "/Algorithm/ListNode/203.移除链表元素",
+          },
+        ],
       },
       {
         text: "排序",
