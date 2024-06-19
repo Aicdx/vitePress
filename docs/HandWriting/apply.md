@@ -20,12 +20,13 @@ testCall.call(obj);
 ### 实现
 
 ```js
-Array.prototype.myCall = function(context,...args){
+Function.prototype.myCall = function(context){
     context = context || window
-    const funcId = Symbol('funcId')
+    const funcId = Symbol('funcId');
     context[funcId] = this
-    const reslut = context[funcId](...args)
-    delete context[...args]
+    const args = [...arguments].slice(1)
+    const reslut = context[funcId](...args);
+    delete context[funcId];
     return reslut
 }
 ```
@@ -48,13 +49,13 @@ console.log(testCall.apply(obj, ['小明', '18']));
 ### 实现apply
 
 ```js
-Array.prototype.MyApply= function(context,args = []){
-    context = context || window
-    const funcId = Symbol('funcId')
+Function.prototype.MyApply = function(context){
+    context = context || globalThis;
+    const funcId = Symbol('funcId');
     context[funcId] = this
-    const result = context[funcId](args)
+    const reslut = arguments[1] ?context[funcId](...arguments[1]): context[funcId]()
     delete context[funcId]
-    return result
+    return reslut;
 }
 ```
 
@@ -68,7 +69,7 @@ Array.prototype.MyApply= function(context,args = []){
 Array.prototype.MyBind = function (){
     const _this = this
     //arguments 是函数内部所有参数的伪数组，需要转成数组操作
-    const args = Array.prototype.slice.call(arguments)
+    const args= [...arguments];
     //第一项为this 后续为函数参数
     const newThis = args.shift()
     return function(){
@@ -98,4 +99,24 @@ Function.prototype.newCall = function(context,...args){
     delete context.fn
     return result
 }
+```
+
+### 执行
+
+```js
+const val = '123'
+const obj = {
+    val :'456'
+}
+
+function myFn(a,b,c,d,e){
+    console.log(this.val,a,b,c,d,e)
+}
+// myFn(1,2,3,4,5)
+// myFn.call(obj,1,2,3,4,5)
+// myFn.myCall(obj,1,2,3,4,5)
+// myFn.apply(obj,[1,2,3,4,5])
+// myFn.MyApply(obj,[1,2,3,4,5])
+myFn.MyBind(obj,1,2,3,4,5)()
+// myFn.bind(obj,1,2,3,4,5)()
 ```
