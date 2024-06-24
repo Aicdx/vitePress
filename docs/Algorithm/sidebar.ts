@@ -6,6 +6,9 @@ const AlgorithmSidebar = [
         collapsed: true,
         items: [
           { text: "二分查找", link: "/Algorithm/Array/twoPointSearch" },
+          { text: "移动元素", link: "/Algorithm/Array/moveElement" },
+          { text: "有序数组的平方", link: "/Algorithm/Array/有序数组的平方" },
+          { text: "滑动窗口", link: "/Algorithm/Array/滑动窗口" },
 
           { text: "移动0", link: "/Algorithm/Array/moveZeroes" },
         ],
