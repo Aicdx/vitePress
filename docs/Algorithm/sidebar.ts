@@ -43,6 +43,16 @@ const AlgorithmSidebar = [
         ],
       },
       {
+        text: "哈希表",
+        collapsed: true,
+        items: [
+          {
+            text: "有效的字母异位词",
+            link: "/Algorithm/Hash/有效的字母异位词",
+          },
+        ],
+      },
+      {
         text: "排序",
         items: [{ text: "删除", link: "/guide/" }],
       },
