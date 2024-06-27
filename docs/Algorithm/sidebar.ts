@@ -44,7 +44,6 @@ const AlgorithmSidebar = [
       },
       {
         text: "哈希表",
-        collapsed: true,
         items: [
           {
             text: "有效的字母异位词",
