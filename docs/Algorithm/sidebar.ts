@@ -50,6 +50,22 @@ const AlgorithmSidebar = [
             text: "有效的字母异位词",
             link: "/Algorithm/Hash/有效的字母异位词",
           },
+          {
+            text: "两个数组的交集",
+            link: "/Algorithm/Hash/两个数组的交集",
+          },
+          {
+            text: "快乐数",
+            link: "/Algorithm/Hash/快乐数",
+          },
+          {
+            text: "两数之和",
+            link: "/Algorithm/Hash/两数之和",
+          },
+          {
+            text: "四数相加II",
+            link: "/Algorithm/Hash/四数相加II",
+          },
         ],
       },
       {
