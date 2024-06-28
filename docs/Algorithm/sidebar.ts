@@ -68,6 +68,23 @@ const AlgorithmSidebar = [
         ],
       },
       {
+        text: "字符串",
+        items: [
+          {
+            text: "反转字符串",
+            link: "/Algorithm/String/反转字符串",
+          },
+          {
+            text: "反转字符串II",
+            link: "/Algorithm/String/反转字符串II",
+          },
+          {
+            text: "翻转字符串里的单词",
+            link: "/Algorithm/String/翻转字符串里的单词",
+          },
+        ],
+      },
+      {
         text: "排序",
         items: [{ text: "删除", link: "/guide/" }],
       },
