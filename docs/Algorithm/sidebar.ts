@@ -37,6 +37,14 @@ const AlgorithmSidebar = [
             link: "/Algorithm/ListNode/19.删除链表的倒数第N个结点",
           },
           {
+            text: "环形链表",
+            link: "/Algorithm/DoublePointer/环形链表",
+          },
+          {
+            text: "环形链表II",
+            link: "/Algorithm/ListNode/142.环形链表 II",
+          },
+          {
             text: "总结",
             link: "/Algorithm/ListNode/Summarize",
           },
@@ -81,6 +89,47 @@ const AlgorithmSidebar = [
           {
             text: "翻转字符串里的单词",
             link: "/Algorithm/String/翻转字符串里的单词",
+          },
+        ],
+      },
+      {
+        text: "双指针",
+        items: [
+          {
+            text: "移除元素",
+            link: "/Algorithm/DoublePointer/移除元素",
+          },
+          {
+            text: "反转字符串",
+            link: "/Algorithm/DoublePointer/反转字符串",
+          },
+          {
+            text: "翻转字符串里的单词",
+            link: "/Algorithm/String/翻转字符串里的单词",
+          },
+          {
+            text: "206.反转链表",
+            link: "/Algorithm/ListNode/206.反转链表",
+          },
+          {
+            text: "19.删除链表的倒数第N个结点",
+            link: "/Algorithm/ListNode/19.删除链表的倒数第N个结点",
+          },
+          {
+            text: "环形链表",
+            link: "/Algorithm/DoublePointer/环形链表",
+          },
+          {
+            text: "环形链表II",
+            link: "/Algorithm/ListNode/142.环形链表 II",
+          },
+          {
+            text: "三数之和",
+            link: "/Algorithm/DoublePointer/三数之和",
+          },
+          {
+            text: "四数之和",
+            link: "/Algorithm/DoublePointer/四数之和",
           },
         ],
       },
