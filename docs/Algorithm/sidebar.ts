@@ -134,6 +134,35 @@ const AlgorithmSidebar = [
         ],
       },
       {
+        text: "栈和队列",
+        items: [
+          {
+            text: "232.用栈实现队列.md",
+            link: "/Algorithm/Stack/232.用栈实现队列",
+          },
+          {
+            text: "用队列实现栈",
+            link: "/Algorithm/Stack/用队列实现栈",
+          },
+          {
+            text: "有效的括号",
+            link: "/Algorithm/Stack/有效的括号",
+          },
+          {
+            text: "删除字符串中的所有相邻重复项",
+            link: "/Algorithm/Stack/删除字符串中的所有相邻重复项",
+          },
+          {
+            text: "逆波兰表达式求值",
+            link: "/Algorithm/Stack/逆波兰表达式求值",
+          },
+          {
+            text: "239.滑动窗口最大值",
+            link: "/Algorithm/Stack/239.滑动窗口最大值",
+          },
+        ],
+      },
+      {
         text: "排序",
         items: [{ text: "删除", link: "/guide/" }],
       },
@@ -145,19 +174,7 @@ const AlgorithmSidebar = [
         text: "树相关",
         items: [{ text: "删除", link: "/guide/" }],
       },
-      {
-        text: "栈和队列",
-        items: [
-          {
-            text: "232.用栈实现队列.md",
-            link: "/Algorithm/Stack/232.用栈实现队列",
-          },
-          {
-            text: "239.滑动窗口最大值",
-            link: "/Algorithm/Stack/239.滑动窗口最大值",
-          },
-        ],
-      },
+
       {
         text: "其他",
         items: [{ text: "删除", link: "/guide/" }],
