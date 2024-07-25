@@ -22,6 +22,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "JavaScript", link: "/MyJavaScript/index" },
+      { text: "设计模式", link: "/DesignPatterns/index" },
       { text: "HTMl&CSS", link: "/htmlCss/index" },
       { text: "工程化", link: "/Engineering/index" },
       { text: "算法", link: "/Algorithm/index" },

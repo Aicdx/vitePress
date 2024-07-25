@@ -4,9 +4,11 @@ import FlutterSidebar from "./Flutter/sidebar";
 import HandWritingSidebar from "./HandWriting/sidebar";
 import VueSidebar from "./MyVue/sidebar";
 import JavaScriptSidebar from "./MyJavaScript/sidebar";
+import DesignPatternsSidebar from "./DesignPatterns/sidebar";
 
 const sidebar = {
   "/MyJavaScript/": JavaScriptSidebar,
+  "/DesignPatterns/": DesignPatternsSidebar,
   "/htmlCss/": [
     {
       text: "Guide",
