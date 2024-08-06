@@ -9,6 +9,10 @@ const DesignPatternsSidebar = [
         text: "工厂模式-抽象工厂",
         link: "/DesignPatterns/AbstractFactory",
       },
+      {
+        text: "单例模式",
+        link: "/DesignPatterns/Singleton",
+      },
     ],
   },
 ];
