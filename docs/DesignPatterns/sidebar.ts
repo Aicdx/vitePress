@@ -13,6 +13,10 @@ const DesignPatternsSidebar = [
         text: "单例模式",
         link: "/DesignPatterns/Singleton",
       },
+      {
+        text: "原型模式",
+        link: "/DesignPatterns/Prototype",
+      },
     ],
   },
 ];
